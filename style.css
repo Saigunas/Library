@@ -1,0 +1,18 @@
+:root {
+    --body-color: #F3F4F6;
+
+    --page-title-size: 2.7rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-color);
+}
+
+.page-title {
+    box-sizing: border-box;
+    padding: 4rem;
+    text-align: center;
+    font-size: var(--page-title-size);
+}
