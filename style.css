@@ -170,6 +170,11 @@ label {
 .grid-container li input {
     min-width: 5em;
     width: 100%;
+    padding: 0.2em 0.5em;
+    border: var(--button-border);
+    color: var(--library-title-color);
+    background-color: var(--library-author-color);
+    border-radius: var(--border-radius);
 }
 
 .button-wrapper {
