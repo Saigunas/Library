@@ -3,6 +3,7 @@
 :root {
     --body-color: #F3F4F6;
     --border-radius: 5px;
+    --button-border: 1px solid var(--library-title-color);
 
     --page-title-size: 2.7rem;
     --library-background: #6B7280;
@@ -43,7 +44,7 @@ body {
     align-self: flex-end;
     margin-bottom: var(--library-book-padding);
     padding: 0.2em 0.5em;
-    border: 1px solid var(--library-title-color);
+    border: var(--button-border);
     color: var(--library-title-color);
     background-color: var(--library-author-color);
     border-radius: var(--border-radius);
@@ -96,7 +97,7 @@ body {
 select{
     padding: 0.2em 0.5em;
     width: 6.8em;
-    border: 1px solid var(--library-title-color);
+    border: var(--button-border);
     color: var(--library-title-color);
     background-color: var(--library-author-color);
     border-radius: var(--border-radius);
@@ -128,8 +129,10 @@ select:hover {
 
 #popup {
     position: fixed;
-    width: 500px;
-    height: 200px;
+    min-width: min-content;
+    width: 80vw;
+    max-width: 40em;
+    height: max-content;
     top: 15%;
     left: 1;
     right: 1;
@@ -142,4 +145,47 @@ select:hover {
     text-align: center;
     font-size: var(--popup-title-size);
     padding: 2rem;
+}
+
+.add-book #book-form .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+}
+
+label {
+    color: var(--library-title-color);
+}
+
+.grid-container {
+    padding: 0 2rem;
+}
+
+.grid-container li {
+    display: flex;
+    flex-direction: column;
+    padding: var(--library-book-padding) 0px;
+}
+
+.grid-container li input {
+    min-width: 5em;
+    width: 100%;
+}
+
+.button-wrapper {
+    grid-column: 1/3;
+}
+
+.add-book-button {
+    width: max-content;
+    padding: 0.2em 0.5em;
+    border: var(--button-border);
+    color: var(--library-title-color);
+    background-color: var(--library-author-color);
+    border-radius: var(--border-radius);
+    margin-left: auto;
+}
+
+.add-book-button:hover {
+    cursor: pointer;
 }

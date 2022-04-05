@@ -25,23 +25,26 @@
             <ul class="grid-container">
                 <li>
                     <label for="title">Title</label>
-                    <input type="text" id="title" name="title"  required>
+                    <input type="text" id="title" name="title" maxlength="20" required>
                 </li>
                 <li>
                     <label for="author">Author</label>
-                    <input type="text" id="author" name="author" required>
+                    <input type="text" id="author" name="author" maxlength="20" required>
                 </li>
                 <li>
                     <label for="pages">Pages</label>
-                    <input type="number" id="pages" name="pages" required pattern="[0-9]" maxlength="6">
+                    <input type="number" id="pages" name="pages" required pattern="[0-9]" max="10000">
                 </li>
                 <li>
-                    <label for="status">CITY</label>
+                    <label for="status">Status</label>
                     <select id="status" name="status">
                         <option>New</option>
                         <option>Reading</option>
                         <option>Read</option>
                     </select>
+                </li>
+                <li class="button-wrapper">
+                    <button class="add-book-button" type="button">Book +</button>
                 </li>
             </ul>
         </form>
