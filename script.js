@@ -50,7 +50,7 @@ function showLibrary() {
 function addBookToLibrary(index) {
   let book = document.createElement('div');
   book.classList.add('book');
-  book.setAttribute(`data-book${index}`, "true");
+  book.setAttribute(`data-book`, `${index}`);
     
   let title = document.createElement('h2');
   title.classList.add('title');
