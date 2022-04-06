@@ -11,15 +11,15 @@
 <body>
     
     <h1 class="page-title">Book Logs</h1>
-
+    
     <div class="library-wrapper">
-        <button type="button">Book +</button>
+        <button class="book-form-caller" type="button">Book +</button>
         <div class="library"></div>
     </div>
-
-    <div class="parent-disable"></div>
-
-    <div class="add-book" id="popup">
+    
+    <div class="parent-disable disabled"></div>
+    
+    <div class="add-book disabled" id="popup">
         <p class="title">New Book</p>
         <form id="book-form">
             <ul class="grid-container">
@@ -38,7 +38,7 @@
                 <li>
                     <label for="status">Status</label>
                     <select id="status" name="status">
-                        <option>New</option>
+                        <option selected>New</option>
                         <option>Reading</option>
                         <option>Read</option>
                     </select>
@@ -49,6 +49,7 @@
             </ul>
         </form>
     </div>
-    <script src="script.js"></script>
+    <script src="libraryLogic.js"></script>
+    <script src="bookForm.js"></script>
 </body>
 </html>
