@@ -2,19 +2,26 @@
 
 :root {
     --body-color: #F3F4F6;
+
     --border-radius: 5px;
-    --button-border: 1px solid var(--library-title-color);
-    --button-hover-color: #d5d7db;
+    --button-border: 1px solid #191110;
+    --button-hover-color: #a7796c;
+    --button-text-color: #191110;
+    --button-background-color: #9A6D60;
 
     --page-title-size: 2.7rem;
-    --library-background: #6B7280;
+    --library-padding: 2rem;
+    --library-background: #040E16;
     --library-book-padding: 0.3rem;
     --library-item-gap: 0.8rem;
     --library-text-length: 9em;
-    --library-title-color: #111827;
-    --library-author-color: #E5E7EB;
+    --library-title-color: #FFFFFF;
+    --library-author-color: #FFFFFF;
     
-    --library-popup-color: var(--body-color);
+    --input-background-color: white;
+    --input-text-color: black;
+
+    --library-popup-color: var(--library-background);
     --popup-title-size: 2rem;
 
     font-family: 'Marcellus', serif;
@@ -25,6 +32,28 @@ body {
     flex-direction: column;
     background-color: var(--body-color);
     align-items: center;
+    padding-bottom: var(--library-item-gap);
+}
+
+.background-image {
+    position: fixed;  
+    z-index:-1;
+    top: 0; 
+    left: 0; 
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.background-filter{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.55;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 
 .page-title {
@@ -32,6 +61,7 @@ body {
     padding: 4rem;
     text-align: center;
     font-size: var(--page-title-size);
+    color: white;
 }
 
 .library-wrapper {
@@ -42,21 +72,23 @@ body {
 }
 
 .library-wrapper > button {
+    white-space: nowrap;
     align-self: flex-end;
     margin-bottom: var(--library-book-padding);
     padding: 0.2em 0.5em;
     border: var(--button-border);
-    color: var(--library-title-color);
-    background-color: var(--library-author-color);
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
     border-radius: var(--border-radius);
 }
 
 .library-wrapper > button:hover {
     cursor: pointer;
+    background-color: var(--button-hover-color);
 }
 
 .library {
-    padding: 2rem;
+    padding: var(--library-padding);
     background-color: var(--library-background);
     border-radius: var(--border-radius);
 }
@@ -93,24 +125,25 @@ body {
 .book .pages {
     margin-left: auto;
     color: var(--library-title-color);
+    width: 3em;
+    text-align: right;
+}
+
+.book img {
+    opacity: 40%;
 }
 
 select{
     padding: 0.2em 0.5em;
     width: 6.8em;
     border: var(--button-border);
-    color: var(--library-title-color);
-    background-color: var(--library-author-color);
+    color: var(--input-text-color);
+    background-color: var(--input-background-color);
     border-radius: var(--border-radius);
 }
 
 select:hover {
     cursor: pointer;
-}
-
-.book img {
-    color: white;
-    opacity: 25%;
 }
 
 .book img:hover {
@@ -140,6 +173,7 @@ select:hover {
     z-index: 999;
     background-color: var(--library-popup-color);
     border-radius: var(--border-radius);
+    padding-bottom: var(--library-padding);
 }
 
 .disabled {
@@ -149,6 +183,7 @@ select:hover {
 .add-book .title {
     text-align: center;
     font-size: var(--popup-title-size);
+    color: var(--library-title-color);
     padding: 2rem;
 }
 
@@ -177,8 +212,8 @@ label {
     width: 100%;
     padding: 0.2em 0.5em;
     border: var(--button-border);
-    color: var(--library-title-color);
-    background-color: var(--library-author-color);
+    color: var(--input-text-color);
+    background-color: var(--input-background-color);
     border-radius: var(--border-radius);
 }
 
@@ -190,8 +225,8 @@ label {
     width: max-content;
     padding: 0.2em 0.5em;
     border: var(--button-border);
-    color: var(--library-title-color);
-    background-color: var(--library-author-color);
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
     border-radius: var(--border-radius);
     margin-left: auto;
 }

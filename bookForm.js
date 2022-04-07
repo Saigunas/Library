@@ -38,10 +38,18 @@ addBookButton.addEventListener('click', checkFormValidity);
 function checkFormValidity() {
     let newBookForm = document.querySelector('#book-form').reportValidity();
     if(newBookForm === true) {
+
+        newBookTitle = capitalizeFirstLetter(newBookTitle);
+        newBookAuthor = capitalizeFirstLetter(newBookAuthor);
+
         let newBook = new Book(newBookTitle, newBookAuthor, newBookPages, newBookStatus);
         myLibrary.push(newBook);
         addBookToLibrary(myLibrary.length - 1);
         parentDisabler.classList.add('disabled');
         popup.classList.add('disabled');
     }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
