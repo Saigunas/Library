@@ -79,7 +79,7 @@ function addBookToLibrary(index) {
   remove.classList.add(`remove-book-button`);
   remove.setAttribute(`data-remove`, `${index}`);
   remove.addEventListener('click', removeBook);
-  remove.src = "/icons/close-box.svg";
+  remove.src = "./icons/close-box.svg";
   
   book.appendChild(title);
   book.appendChild(author);
