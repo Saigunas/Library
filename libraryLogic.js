@@ -1,15 +1,19 @@
+
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+} 
+
 const library =  document.querySelector('.library');
 
 let myLibrary = [];
 
 setDefaultBooks();
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
 
 function setDefaultBooks() {
   let newBook = new Book("The Last Wish", "Andrzej Sapkowski", '359', 'Read');
